@@ -36,8 +36,8 @@ cacheinverse <- function(x, ...) {
 # provided it doesn't already exist
 
 cacheSolve <- function(x, ...) {
-    i <- solve(cacheinverse)
-    if(!is.null(i)) {
+    m <- x$getmean()
+    if(!is.null(m)) {
       message("getting cached data")
       return(m)
     }
